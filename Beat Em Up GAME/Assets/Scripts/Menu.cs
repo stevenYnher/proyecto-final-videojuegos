@@ -5,20 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
 
-	
-	
-	// Update is called once per frame
-	void Update () {
-
-		if (Input.anyKeyDown)
-		{
-			LoadScene();
-		}
-
-	}
-
-	void LoadScene()
+	public void PlayGame ()
 	{
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+	}
+
+	public void QuitGame ()
+	{
+		Application.Quit();
 	}
 }
